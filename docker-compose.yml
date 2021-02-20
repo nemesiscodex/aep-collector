@@ -1,0 +1,11 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:13-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: aep
+      POSTGRES_USER: aep
+      POSTGRES_DB: aep
+    ports:
+      - 5432:5432
