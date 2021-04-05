@@ -17,7 +17,8 @@ pub async fn update(Query(frame): Query<Frame>, pool: Data::<PgPool>) -> HttpRes
             .execute(pool.as_ref()).await;
 
     match result {
-        Ok(_) => HttpResponse::Ok().finish(),
+        Ok(_) => HttpResponse::Ok()
+            .body("ACK\n"),
         Err(_) => HttpResponse::InternalServerError().finish()
     }
         
