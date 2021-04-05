@@ -1,5 +1,5 @@
 [package]
-name = "darti-collector"
+name = "aep-collector"
 version = "0.1.0"
 authors = ["Julio Daniel Reyes <nemesiscodex@gmail.com>"]
 edition = "2018"
@@ -12,4 +12,6 @@ config = "0.10.1"
 dotenv = "0.15.0"
 futures = "0.3.12"
 serde = "1.0.123"
+env_logger = "0.8.3"
+log = "0.4.14"
 sqlx = { version = "0.4.2", features = ["runtime-actix-native-tls", "postgres"] }
