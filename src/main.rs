@@ -24,7 +24,9 @@ async fn main() -> std::io::Result<()> {
             .wrap(Logger::default())
             .data(db_pool.clone())
             .wrap(key.clone())
-            .service(handler::update)
+            .service(handler::activations)
+            .service(handler::sensors)
+            .service(handler::frames)
     })
     .bind(address)?
     .run()
