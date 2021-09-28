@@ -2,6 +2,7 @@ mod config;
 mod handler;
 mod middleware;
 mod service;
+mod models;
 
 use actix_web::{App, HttpServer, middleware::Logger};
 use crate::middleware::ApiKey;
